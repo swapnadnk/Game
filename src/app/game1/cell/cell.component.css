@@ -1,0 +1,16 @@
+.outerDiv {
+    height: 60px; 
+    width: 60px; 
+    border: 1px solid white;
+    border-radius: 5px;
+    float: left; 
+    margin: 4px; 
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.innerDiv{
+    -ms-transform: translateY(40%);
+  transform: translateY(40%);
+}

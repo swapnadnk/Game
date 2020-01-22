@@ -1,0 +1,26 @@
+<div class="outerDiv">
+  <mat-card fxLayout="column">
+  <mat-card-header class="headerTitle">
+      <mat-card-title>TIC TAC TOE</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <div fxLayout="row">
+        Player {{turn}}'s turn
+      </div>
+      <br>
+      <div fxLayout="row">
+          <app-cell *ngFor="let cell of cells | slice: 0: 3; let i = index" [value]="cell" (userClick)=clickHandler(i)></app-cell>
+          </div>
+        <div fxLayout="row">
+          <app-cell *ngFor="let cell of cells | slice: 3: 6; let i = index" [value]="cell" (userClick)=clickHandler(i+3)></app-cell>
+        </div>
+        <div fxLayout="row">
+          <app-cell *ngFor="let cell of cells | slice: 6; let i = index" [value]="cell" (userClick)=clickHandler(i+6)></app-cell>
+        </div>
+        <br>
+        <div fxLayout="row" *ngIf="winner">
+            {{winner}} is the winner.
+        </div>
+  </mat-card-content>
+</mat-card>
+</div>
